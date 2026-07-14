@@ -49,6 +49,7 @@ $required = @(
   'references/scale-and-completion.md',
   'references/package-contract.md',
   'scripts/validate_world.ps1',
+  'scripts/validate_world.js',
   'assets/world-template/state.yaml',
   'assets/world-template/manifest.yaml',
   'assets/world-template/subject_registry.yaml',
