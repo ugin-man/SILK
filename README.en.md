@@ -37,9 +37,9 @@ Copy-Item -Recurse -Force .\skills\silk-worldbuilder "$HOME\.codex\skills\silk-w
 
 ## Public demo
 
-[Glass Tide](examples/worlds/glass-tide) is a small world generated in this release from a prompt about harvesting glass from tides that remember heat. The repository preserves the prompt, Level 0 through Level 4 run record, six subjects, five relations, three claims, work ledgers, AI self-audit, and human evaluation form.
+[Glass Tide](examples/worlds/glass-tide) is a small world generated in this release from a prompt about harvesting glass from tides that remember heat. The repository preserves the prompt, Level 0 through Level 4 run record, six subjects, five relations, three claims, work ledgers, AI self-audit, and a low-confidence human evaluation record.
 
-The demo verifies that a small revision 2 package can be generated, recorded, and structurally validated with the formal parser. All subjects remain in `subjects/pending/` because no human approval has been inferred.
+The demo verifies that a small revision 2 package can be generated, recorded, and structurally validated with the formal parser. The repository owner's response was tentatively accepting but explicitly uncertain, so it is not treated as an independent creative-quality pass. All subjects remain in `subjects/pending/` because no human approval has been inferred.
 
 ## What is verified
 

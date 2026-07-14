@@ -37,9 +37,9 @@ Copy-Item -Recurse -Force .\skills\silk-worldbuilder "$HOME\.codex\skills\silk-w
 
 ## 公開デモ
 
-[Glass Tide](examples/worlds/glass-tide)は、「熱を記憶する潮からガラスを採る」という入力から今回生成した小規模世界です。入力、Level 0からLevel 4の実行記録、6主題、5関係、3主張、作業台帳、AI自己監査、人間評価欄を公開しています。
+[Glass Tide](examples/worlds/glass-tide)は、「熱を記憶する潮からガラスを採る」という入力から今回生成した小規模世界です。入力、Level 0からLevel 4の実行記録、6主題、5関係、3主張、作業台帳、AI自己監査、低確信度の人間評価記録を公開しています。
 
-このデモで、小規模なrevision 2パッケージを生成し、過程を記録し、正式パーサーで構造検証できることを確認しました。全主題は人間未承認のため`subjects/pending/`にあります。
+このデモで、小規模なrevision 2パッケージを生成し、過程を記録し、正式パーサーで構造検証できることを確認しました。リポジトリ所有者の反応は「概ね問題なさそうだが判断には自信がない」という内容で、独立した創作品質の合格とは扱っていません。全主題は人間未承認のため`subjects/pending/`にあります。
 
 ## 検証済み範囲
 

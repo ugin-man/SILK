@@ -4,7 +4,7 @@ clean_audit_streak: 2
 last_audit: workspace/audits/route-b-reader.md
 critical_gaps: []
 noncritical_limitations:
-  - Human creative-quality evaluation is pending.
+  - One low-confidence owner evaluation is recorded; an independent creative-quality pass is still pending.
   - The compact evidence envelope does not prove multi-day autonomous generation at large scale.
   - Exact cartography is intentionally omitted.
 dimensions:

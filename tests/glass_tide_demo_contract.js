@@ -29,6 +29,11 @@ test('Glass Tide preserves execution and review evidence', () => {
   assert.match(selfAudit, /Structural validation is not creative proof/);
   assert.match(human, /Evaluator:/);
   assert.doesNotMatch(human, /Evaluator:\s*(Codex|AI|ChatGPT)/i);
+  assert.match(human, /Evaluator: repository owner/i);
+  assert.match(human, /Reviewer statement \(verbatim\): `まあいんじゃね？わかんね`/);
+  assert.match(human, /Overall: inconclusive; tentative acceptance with low confidence/i);
+  assert.match(human, /Approval scope, if any: evaluation record only; no subject or world approval/i);
+  assert.doesNotMatch(human, /pending human reviewer|Overall: pending/i);
 });
 
 test('Glass Tide keeps the fixed subject, relation, and claim boundaries', () => {
