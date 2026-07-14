@@ -87,9 +87,8 @@ if (fs.existsSync(browserEvidencePath)) {
 }
 if (browserValidation.status !== 'PASS') failures.push(`browser validation is ${browserValidation.status}`);
 
-const report = {
+const reportBody = {
   ok: failures.length === 0,
-  generated_at: new Date().toISOString(),
   candidate: candidateReportPath,
   sha256: candidateSha256,
   bytes: Buffer.byteLength(html),
@@ -107,6 +106,17 @@ const report = {
   failures,
   browser_validation: browserValidation
 };
+let generatedAt = new Date().toISOString();
+if (fs.existsSync(reportPath)) {
+  try {
+    const previous = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+    const { generated_at: previousGeneratedAt, ...previousBody } = previous;
+    if (previousGeneratedAt && JSON.stringify(previousBody) === JSON.stringify(reportBody)) generatedAt = previousGeneratedAt;
+  } catch {
+    // Invalid prior output is replaced by the current audit.
+  }
+}
+const report = { ok: reportBody.ok, generated_at: generatedAt, ...Object.fromEntries(Object.entries(reportBody).filter(([key]) => key !== 'ok')) };
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
 console.log(JSON.stringify(report, null, 2));
 if (!report.ok) process.exit(1);

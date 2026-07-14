@@ -1,0 +1,74 @@
+name: SILK CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  v1-theory:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Check theoretical component contract
+        shell: pwsh
+        run: pwsh ./tests/silk_skill_contract.Tests.ps1
+
+  v1-validator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Test V1 validator and generated demo
+        run: node --test tests/v1_validator_contract.js tests/glass_tide_demo_contract.js
+      - name: Validate Glass Tide
+        run: npm run validate:demo
+
+  v2-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Rebuild V2 release candidate
+        run: node v2.next/scripts/build_v2_next.js
+      - name: Run V2 contracts
+        run: npm run test:v2
+      - name: Run V2 static audit
+        run: npm run audit:v2
+
+  release-consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Check release metadata and evidence
+        run: node --test tests/release_consistency_contract.js
