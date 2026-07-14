@@ -1,0 +1,16 @@
+items:
+  - source: glass-tide.place.rain-vault
+    target: glass-tide.phenomenon.ember-tide
+    expected_relation: Rain records or explains tidal heat memory.
+    verdict: rejected
+    reason: The Vault measures rainfall through stone acoustics; similarity around memory is thematic, not causal.
+  - source: glass-tide.route.pale-current
+    target: glass-tide.phenomenon.ember-tide
+    expected_relation: The seasonal current carries or powers Ember glass.
+    verdict: rejected
+    reason: The current changes access only; glass decays aboard ship at the ordinary rate.
+  - source: glass-tide.institution.cooling-houses
+    target: glass-tide.place.rain-vault
+    expected_relation: Civic cooling obligations extend inland.
+    verdict: rejected
+    reason: Cooling houses arise from First Light's fire history and have no inland jurisdiction.

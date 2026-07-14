@@ -1,0 +1,7 @@
+world_level: 4
+current_phase: integrate
+active_packet: null
+active_change_set: null
+last_integrated_iteration: 5
+next_action: human_review
+promotion_blockers: []

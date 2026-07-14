@@ -1,0 +1,20 @@
+format: silk-world-v1
+revision: 2
+world_id: glass-tide
+world_status: internally_complete
+world_level: 4
+user_approval_state: unreviewed
+entrypoints:
+  overview: reports/world_overview.md
+  catalog: views/catalog.md
+  by_status: views/by_status.md
+  relation_map: views/relation_map.md
+  claims: views/claims.md
+  shape_report: reports/shape_report.md
+  interest_audit: reports/interest_audit.md
+  quality_report: reports/quality_report.md
+  review_packet: reports/review_packet.md
+registries:
+  subjects: subject_registry.yaml
+  relations: relation_registry.yaml
+  claims: claim_registry.yaml

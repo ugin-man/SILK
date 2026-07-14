@@ -1,0 +1,33 @@
+world:
+  id: glass-tide
+title: Glass Tide
+intent: A compact maritime setting where remembered heat shapes labor, care, and seasonal isolation without explaining the whole world.
+intended_appeals:
+  - tactile maritime work
+  - attractive mutual-aid customs
+  - disputed material history
+  - coherent but non-convergent causes
+taste_profile:
+  - restrained wonder
+  - material consequences
+  - ordinary competence
+desired_scale: compact regional world
+scope_envelope:
+  - the First Light coast and its near-water routes
+  - one deliberately separate inland archive
+status: internally_complete
+user_canon: []
+constraints:
+  - no chosen protagonist
+  - no universal magic system
+  - no institution with world-wide control
+  - ember glass cannot become an unlimited energy source
+exclusions:
+  - chapter plans
+  - prescribed quests
+  - a single cause behind every subject
+reversible_assumptions:
+  - the ember tide has observable heat memory but no settled origin
+  - exact cartography is omitted because relative spatial facts are sufficient for this compact evidence world
+spatial_registry_status: omitted_by_design
+spatial_registry_reason: The demo tests relative route and isolation constraints without claiming exact map geometry.

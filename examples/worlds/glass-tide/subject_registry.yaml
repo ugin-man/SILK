@@ -1,0 +1,103 @@
+subjects:
+  - id: glass-tide.phenomenon.ember-tide
+    title: Ember Tide
+    canonical_path: subjects/pending/tidal_phenomena/ember-tide.md
+    development_status: internally_accepted
+    user_status: unreviewed
+    canon_authority: generated
+    primary_collection: tidal_phenomena
+    collections: [tidal_phenomena]
+    maturity_level: 4
+    weight: load_bearing
+    aliases: [Red Return]
+    summary: A tide that stores recent coastal heat and releases it into short-lived glass skins.
+    intended_role: [material constraint, disputed origin]
+    intended_appeal: [tactile wonder, dangerous work]
+    causal_roots: [root.thermal-memory]
+    pattern_tags: [bounded-phenomenon]
+    display: { importance: 94, visibility_tier: 0, label_priority: 96, representative: true, preferred_contexts: [atlas_overview, reader] }
+  - id: glass-tide.place.first-light-terraces
+    title: First Light Terraces
+    canonical_path: subjects/pending/settlements/first-light-terraces.md
+    development_status: internally_accepted
+    user_status: unreviewed
+    canon_authority: generated
+    primary_collection: settlements
+    collections: [settlements]
+    maturity_level: 4
+    weight: load_bearing
+    aliases: [First Light]
+    summary: A stepped harbor settlement whose workday follows a narrow safe glass-harvest window.
+    intended_role: [lived coastal anchor, labor consequences]
+    intended_appeal: [competent communal life]
+    causal_roots: [root.terrace-settlement]
+    pattern_tags: [tidal-labor]
+    display: { importance: 92, visibility_tier: 0, label_priority: 94, representative: true, preferred_contexts: [atlas_overview, map, reader] }
+  - id: glass-tide.institution.cooling-houses
+    title: Cooling Houses
+    canonical_path: subjects/pending/civic_practices/cooling-houses.md
+    development_status: internally_accepted
+    user_status: unreviewed
+    canon_authority: generated
+    primary_collection: civic_practices
+    collections: [civic_practices]
+    maturity_level: 3
+    weight: supporting
+    aliases: []
+    summary: Neighborhood rooms that turn shared shade, brine, and watch duty into burn aftercare.
+    intended_role: [attractive tradition, limited civic obligation]
+    intended_appeal: [mutual aid without utopia]
+    causal_roots: [root.terrace-settlement, root.civic-fire-memory]
+    pattern_tags: [local-care]
+    display: { importance: 72, visibility_tier: 1, label_priority: 78, representative: true, preferred_contexts: [atlas_focus, reader] }
+  - id: glass-tide.people.ash-divers
+    title: Ash-Divers
+    canonical_path: subjects/pending/livelihoods/ash-divers.md
+    development_status: internally_accepted
+    user_status: unreviewed
+    canon_authority: generated
+    primary_collection: livelihoods
+    collections: [livelihoods]
+    maturity_level: 3
+    weight: supporting
+    aliases: [Dawn Hands]
+    summary: Harvest crews trained to lift cooling glass skins before the sea reclaims them.
+    intended_role: [material labor, bodily and economic limits]
+    intended_appeal: [specialized competence]
+    causal_roots: [root.thermal-memory, root.terrace-settlement]
+    pattern_tags: [hazardous-craft]
+    display: { importance: 76, visibility_tier: 1, label_priority: 80, representative: false, preferred_contexts: [atlas_focus, reader] }
+  - id: glass-tide.route.pale-current
+    title: Pale Current
+    canonical_path: subjects/pending/routes/pale-current.md
+    development_status: internally_accepted
+    user_status: unreviewed
+    canon_authority: generated
+    primary_collection: routes
+    collections: [routes]
+    maturity_level: 3
+    weight: supporting
+    aliases: [Milk Road]
+    summary: A seasonal surface current that briefly makes low-sailed travel to First Light reliable.
+    intended_role: [seasonal access, bounded isolation]
+    intended_appeal: [rhythmic connection and absence]
+    causal_roots: [root.pale-current]
+    pattern_tags: [seasonal-route]
+    display: { importance: 65, visibility_tier: 2, label_priority: 70, representative: false, preferred_contexts: [map, atlas_focus, reader] }
+  - id: glass-tide.place.rain-vault
+    title: Rain Vault
+    canonical_path: subjects/pending/inland_archives/rain-vault.md
+    development_status: internally_accepted
+    user_status: unreviewed
+    canon_authority: generated
+    primary_collection: inland_archives
+    collections: [inland_archives]
+    maturity_level: 3
+    weight: supporting
+    aliases: [The Dry Archive]
+    summary: An inland archive that reads rainfall through stone channels and predates coastal glass harvesting.
+    intended_role: [independent causal root, intentional non-relation]
+    intended_appeal: [quiet historical depth beyond the premise]
+    causal_roots: [root.rain-listening]
+    pattern_tags: [deliberate-independence]
+    display: { importance: 54, visibility_tier: 3, label_priority: 60, representative: false, preferred_contexts: [atlas_focus, reader] }

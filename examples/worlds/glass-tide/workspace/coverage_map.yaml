@@ -1,0 +1,20 @@
+cells:
+  - dimension: material mechanism
+    evidence: [glass-tide.phenomenon.ember-tide]
+    status: covered
+  - dimension: lived labor
+    evidence: [glass-tide.place.first-light-terraces, glass-tide.people.ash-divers]
+    status: covered
+  - dimension: care and institution
+    evidence: [glass-tide.institution.cooling-houses]
+    status: covered
+  - dimension: route and isolation
+    evidence: [glass-tide.route.pale-current]
+    status: covered
+  - dimension: independent history
+    evidence: [glass-tide.place.rain-vault]
+    status: covered
+  - dimension: exact cartography
+    evidence: []
+    status: intentionally_omitted
+    reason: Relative spatial constraints are enough for the compact demo; no map claim is made.

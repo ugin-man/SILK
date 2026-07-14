@@ -1,0 +1,31 @@
+collections:
+  - id: tidal_phenomena
+    label: Tidal phenomena
+    role: Material cycles observed in coastal water
+    weight: primary
+    reason: The ember tide supplies the setting's main material constraint.
+  - id: settlements
+    label: Settlements
+    role: Places where environmental conditions become daily arrangements
+    weight: primary
+    reason: First Light carries the compact world's lived coastal scale.
+  - id: civic_practices
+    label: Civic practices
+    role: Local obligations maintained without central government
+    weight: supporting
+    reason: Cooling houses show how risk becomes neighborhood care.
+  - id: livelihoods
+    label: Livelihoods
+    role: Skilled work and its bodily and economic limits
+    weight: supporting
+    reason: Ash-divers expose the costs of harvesting remembered heat.
+  - id: routes
+    label: Routes
+    role: Seasonal access conditions rather than static roads
+    weight: supporting
+    reason: The Pale Current changes trade and isolation without controlling the tide.
+  - id: inland_archives
+    label: Inland archives
+    role: Knowledge traditions outside the coastal causal graph
+    weight: edge
+    reason: The Rain Vault preserves an independent historical root and explicit non-relation.

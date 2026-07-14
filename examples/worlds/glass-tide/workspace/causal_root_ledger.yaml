@@ -1,0 +1,31 @@
+roots:
+  - id: root.thermal-memory
+    independent_basis: A bounded coastal material phenomenon with an unresolved origin.
+    subjects: [glass-tide.phenomenon.ember-tide, glass-tide.people.ash-divers]
+    intersections: [glass-tide.place.first-light-terraces]
+    scope: local coast
+    monopoly_check: Does not cause the current, Rain Vault, or cooling-house authority.
+  - id: root.terrace-settlement
+    independent_basis: Harbor topography and household settlement history.
+    subjects: [glass-tide.place.first-light-terraces]
+    intersections: [glass-tide.institution.cooling-houses, glass-tide.people.ash-divers]
+    scope: settlement
+    monopoly_check: Does not reach inland or control regional navigation.
+  - id: root.civic-fire-memory
+    independent_basis: The Three-Quay Fire and a negotiated local care compact.
+    subjects: [glass-tide.institution.cooling-houses]
+    intersections: [glass-tide.place.first-light-terraces, glass-tide.people.ash-divers]
+    scope: participating neighborhoods
+    monopoly_check: Provides care but no general government.
+  - id: root.pale-current
+    independent_basis: Upland melt, chalk, and seasonal crosswinds.
+    subjects: [glass-tide.route.pale-current]
+    intersections: [glass-tide.place.first-light-terraces]
+    scope: regional seasonal route
+    monopoly_check: Changes access but not tidal heat or civic authority.
+  - id: root.rain-listening
+    independent_basis: Inland rainfall, carved stone acoustics, and archive continuity.
+    subjects: [glass-tide.place.rain-vault]
+    intersections: []
+    scope: inland site
+    monopoly_check: Preserved as an intentional non-relation.

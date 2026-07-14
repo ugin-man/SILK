@@ -1,0 +1,17 @@
+id: change.iteration-005.final-audit-integration
+status: applied
+subjects_create: []
+subjects_update: []
+subjects_move: []
+subjects_discard: []
+relations_add: []
+relations_update: []
+relations_cut: []
+claims_update: []
+collections_update: []
+queues_close: []
+queues_open: []
+reports_rewrite: [reports/quality_report.md, reports/review_packet.md]
+maturity_changes: []
+completion_update: completion.yaml
+manifest_update: manifest.yaml

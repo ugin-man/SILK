@@ -1,0 +1,34 @@
+claims:
+  - id: claim.ember-tide.origin
+    statement: Ember tides began when a drowned caldera learned the heat of an ancient eruption.
+    development_status: intentionally_unresolved
+    user_status: unreviewed
+    canon_authority: generated_dispute
+    knowledge_status: disputed
+    asserted_by: [glass-tide.people.ash-divers]
+    challenged_by: [glass-tide.place.first-light-terraces]
+    evidence: [Deep-water glass contains heat bands, but old kiln slag can produce similar bands.]
+    scope: explanations of the ember tide
+    authorial_resolution: unresolved
+  - id: claim.cooling-houses.civic-obligation
+    statement: Every First Light household owes material or time to its nearest cooling house during harvest season.
+    development_status: internally_accepted
+    user_status: unreviewed
+    canon_authority: generated
+    knowledge_status: settled_local_practice
+    asserted_by: [glass-tide.place.first-light-terraces, glass-tide.institution.cooling-houses]
+    challenged_by: []
+    evidence: [Three-Quay compact copies and current neighborhood burn ledgers.]
+    scope: First Light neighborhoods
+    authorial_resolution: true within stated scope
+  - id: claim.rain-vault.predates-harvesting
+    statement: The Rain Vault was already receiving seasonal records before coastal glass harvesting began.
+    development_status: internally_accepted
+    user_status: unreviewed
+    canon_authority: generated
+    knowledge_status: strongly_supported
+    asserted_by: [glass-tide.place.rain-vault]
+    challenged_by: []
+    evidence: [Lower rain channels are sealed beneath later coastal trade marks.]
+    scope: relative chronology
+    authorial_resolution: true

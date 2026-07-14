@@ -1,0 +1,19 @@
+items:
+  - id: scope.ember-tide
+    subject: glass-tide.phenomenon.ember-tide
+    reach: local
+    inclusion: Sheltered water along the First Light coast.
+    exclusions: [open ocean, inland rain, ordinary tides, stored glass after one cycle]
+    boundary: Requires daily absorbed heat and local water conditions.
+  - id: scope.cooling-houses
+    subject: glass-tide.institution.cooling-houses
+    reach: neighborhood
+    inclusion: Participating First Light household compacts.
+    exclusions: [world government, visiting-crew discipline, inland settlements]
+    boundary: Authority depends on contributed stock and local recognition.
+  - id: scope.pale-current
+    subject: glass-tide.route.pale-current
+    reach: regional seasonal route
+    inclusion: Six-to-nine-week surface passage.
+    exclusions: [year-round navigation, tide control, glass preservation]
+    boundary: Upland melt and crosswinds must coincide.

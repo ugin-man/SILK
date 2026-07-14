@@ -1,0 +1,39 @@
+state: internally_complete
+world_level: 4
+clean_audit_streak: 2
+last_audit: workspace/audits/route-b-reader.md
+critical_gaps: []
+noncritical_limitations:
+  - Human creative-quality evaluation is pending.
+  - The compact evidence envelope does not prove multi-day autonomous generation at large scale.
+  - Exact cartography is intentionally omitted.
+dimensions:
+  subject_integrity: pass
+  depth: pass
+  interest: pass
+  causality: pass
+  weave: pass
+  breadth: pass
+  independence: pass
+  anti_template: pass
+  scope: pass
+  naming: pass
+  coherence: pass
+  mystery: pass
+  plot_boundary: pass
+  usability: pass
+evidence:
+  subject_integrity: [subject_registry.yaml, views/by_status.md]
+  depth: [glass-tide.phenomenon.ember-tide, glass-tide.place.first-light-terraces, workspace/vertical_packets/ember-tide.md, workspace/vertical_packets/first-light.md]
+  interest: [reports/interest_audit.md, reports/review_packet.md]
+  causality: [workspace/causal_root_ledger.yaml, claim_registry.yaml]
+  weave: [relation_registry.yaml, workspace/non_relation_ledger.yaml]
+  breadth: [reports/world_overview.md, workspace/coverage_map.yaml]
+  independence: [glass-tide.route.pale-current, glass-tide.place.rain-vault, workspace/causal_root_ledger.yaml]
+  anti_template: [workspace/pattern_ledger.yaml, views/comparison_matrix.md]
+  scope: [workspace/scope_ledger.yaml, world.yaml]
+  naming: [views/catalog.md, reports/quality_report.md#naming]
+  coherence: [reports/shape_report.md, workspace/audits/route-a-systems.md]
+  mystery: [claim.ember-tide.origin, views/claims.md]
+  plot_boundary: [world.yaml, workspace/audits/route-b-reader.md]
+  usability: [reports/world_overview.md, views/catalog.md, reports/review_packet.md]

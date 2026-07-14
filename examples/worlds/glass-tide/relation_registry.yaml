@@ -1,0 +1,57 @@
+relations:
+  - id: relation.ember-tide.first-light.harvest-cycle
+    source: glass-tide.phenomenon.ember-tide
+    target: glass-tide.place.first-light-terraces
+    type: material-cycle
+    summary: The settlement opens and closes its lowest terraces around the tide's forty-minute workable glass skin.
+    effects_on_source: [Harvest scoring changes where the next tide sheds usable sheets.]
+    effects_on_target: [Work, sleep, debt settlement, and quay access follow the safe lifting window.]
+    origin: Repeated coastal observation rather than legal decree.
+    scope: local coast
+    development_status: internally_accepted
+    user_status: unreviewed
+  - id: relation.first-light.cooling-houses.civic-obligation
+    source: glass-tide.place.first-light-terraces
+    target: glass-tide.institution.cooling-houses
+    type: civic-obligation
+    summary: Terrace households owe shade cloth, cool brine, or watch hours to the nearest cooling house.
+    effects_on_source: [The obligation distributes harvest injury costs across neighborhoods but causes seasonal disputes over arrears.]
+    effects_on_target: [Cooling houses gain supplies and rotating attendants without becoming a central authority.]
+    origin: The Three-Quay Fire compact.
+    scope: First Light neighborhoods
+    development_status: internally_accepted
+    user_status: unreviewed
+  - id: relation.ash-divers.ember-tide.occupational-risk
+    source: glass-tide.people.ash-divers
+    target: glass-tide.phenomenon.ember-tide
+    type: occupational-risk
+    summary: Ash-divers can read heat seams but repeated exposure scars their hands and shortens safe dives.
+    effects_on_source: [Crews rotate by cumulative hand tremor, and veteran status can mean less earning capacity.]
+    effects_on_target: [Divers leave deliberate break-lines that alter where later glass skins fracture.]
+    origin: Craft practice developed after early mass-casualty harvests.
+    scope: ember-tide harvest sites
+    development_status: internally_accepted
+    user_status: unreviewed
+  - id: relation.pale-current.first-light.seasonal-access
+    source: glass-tide.route.pale-current
+    target: glass-tide.place.first-light-terraces
+    type: seasonal-access
+    summary: For six to nine weeks the Pale Current permits predictable shallow-draft arrivals; outside it, First Light is costly to reach.
+    effects_on_source: [Pilot marks are maintained by visiting crews and decay during the closed season.]
+    effects_on_target: [Bulk salt, grain, apprentices, and news arrive in one compressed season, producing storage pressure rather than year-round trade.]
+    origin: A wind-driven freshwater lens unrelated to the ember tide.
+    scope: regional seasonal route
+    development_status: internally_accepted
+    user_status: unreviewed
+  - id: relation.ash-divers.cooling-houses.aftercare
+    source: glass-tide.people.ash-divers
+    target: glass-tide.institution.cooling-houses
+    type: aftercare
+    summary: Crews bring burn ledgers and injured divers to their home cooling house after each harvest.
+    effects_on_source: [Recorded exposure can bar a diver from the next tide, protecting health while also cutting wages.]
+    effects_on_target: [House attendants accumulate practical injury knowledge but cannot compel distant crews to follow it.]
+    origin: Neighborhood practice standardized after the Three-Quay Fire.
+    scope: participating First Light neighborhoods
+    development_status: internally_accepted
+    user_status: unreviewed
+junctions: []
