@@ -5,7 +5,7 @@
   "description": "Autonomous AI worldbuilding skill and local visual atlas for Codex",
   "license": "MIT",
   "scripts": {
-    "test:v1": "node --test tests/v1_validator_contract.js tests/glass_tide_demo_contract.js tests/oss_docs_contract.js",
+    "test:v1": "node --test tests/v1_validator_contract.js tests/glass_tide_demo_contract.js tests/oss_docs_contract.js tests/markdown_links_contract.js",
     "validate:demo": "node skills/silk-worldbuilder/scripts/validate_world.js examples/worlds/glass-tide",
     "test:v2": "node v2.next/tests/run_all.js",
     "audit:v2": "node v2.next/scripts/static_audit.js",
