@@ -53,7 +53,7 @@ function checkReleaseConsistency(root) {
 
   const readmes = [
     ['README.md', /検証済み範囲|validation limits/i],
-    ['README.en.md', /validation limits/i]
+    ['README.en.md', /validation limits|what is not yet proven/i]
   ];
   for (const [relative, limitPattern] of readmes) {
     if (!exists(relative)) continue;

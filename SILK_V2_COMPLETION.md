@@ -2,6 +2,8 @@
 
 V2は、地理を扱うWORLDと、設定全体を読むATLAS Graph、Readerを一つのHTMLへまとめたローカルアプリです。公開候補は作品固有の設定を持たないプレーン状態から起動します。
 
+リポジトリの公開版は`v0.1.0`です。これはリポジトリのRelease番号であり、V1 revision 2世界パッケージやV2アプリ名とは別に管理します。
+
 ## 正本
 
 - 編集元: `v2.next/src/plain-host.html`、`v2.next/src/`、`v2.next/data/plain-world.json`

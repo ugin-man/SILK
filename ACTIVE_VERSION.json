@@ -1,4 +1,6 @@
 {
+  "repository_release": "0.1.0",
+  "world_package_format": "silk-world-v1 revision 2",
   "active": "v2.next/SILK-V2.html",
   "compatibility": "v2.next/SILK-V2-NEXT.html",
   "stage": "v2-release-candidate",
