@@ -3,6 +3,7 @@
 /.codex/
 /.playwright-cli/
 /output/
+/.worktrees/
 
 # Private, project-specific, and recovery material
 /novel_world/
