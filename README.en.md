@@ -58,7 +58,7 @@ Structural validation does not prove creative quality.
 - Creative-quality evaluation by several independent people
 - Maintenance of book-scale worlds over long periods
 
-Glass Tide is small execution evidence, not a general proof of grandeur or interest. Long-run validation is tracked at `LONG_RUN_VALIDATION_ISSUE_URL`.
+Glass Tide is small execution evidence, not a general proof of grandeur or interest. Long-run validation is tracked in [GitHub Issue #1](https://github.com/ugin-man/SILK/issues/1).
 
 ## Contributing
 

@@ -58,7 +58,7 @@ Copy-Item -Recurse -Force .\skills\silk-worldbuilder "$HOME\.codex\skills\silk-w
 - 独立した複数人による創作品質評価
 - 書籍規模の世界や長期運用での保守性
 
-Glass Tideは小規模な実行証拠であり、壮大さや面白さの一般的証明ではありません。長時間検証は`LONG_RUN_VALIDATION_ISSUE_URL`で追跡します。
+Glass Tideは小規模な実行証拠であり、壮大さや面白さの一般的証明ではありません。長時間検証は[GitHub Issue #1](https://github.com/ugin-man/SILK/issues/1)で追跡します。
 
 ## 貢献
 
