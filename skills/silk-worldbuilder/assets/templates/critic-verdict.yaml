@@ -1,0 +1,14 @@
+target: <subject-or-relation-id>
+artifact_state: <integrated-state-id>
+intended_role: []
+intended_appeal: []
+strongest_success: null
+strongest_failure: null
+strongest_case_for_replacement: null
+scope_findings: []
+rescue_debt: []
+counterevidence: []
+verdict: deepen
+required_action: []
+affected_ids: []
+

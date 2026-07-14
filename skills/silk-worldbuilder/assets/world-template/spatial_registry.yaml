@@ -1,0 +1,14 @@
+format: silk-spatial-v1
+revision: 0
+world_id: <world-id>
+space_model:
+  type: undefined
+  reason: spatial model has not been derived from user intent and canon
+  scale: unknown
+renderer_profile:
+  primary: none
+  optional: []
+  fallback: atlas
+coordinate_spaces: []
+features: []
+unplaced_obligations: []

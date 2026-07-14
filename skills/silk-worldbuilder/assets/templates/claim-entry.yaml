@@ -1,0 +1,12 @@
+id: claim.<stable-slug>
+statement: <load-bearing proposition>
+development_status: working
+user_status: unreviewed
+canon_authority: generated
+knowledge_status: disputed
+asserted_by: []
+challenged_by: []
+evidence: []
+scope: local
+authorial_resolution: intentionally_unresolved
+protected_boundaries: []

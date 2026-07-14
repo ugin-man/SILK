@@ -1,0 +1,12 @@
+id: hypothesis.<slug>
+gap: <world gap being addressed>
+idea: <candidate possibility>
+reasoning_direction: independence
+intended_role: []
+intended_appeal: []
+estimated_scope: local
+estimated_obligations: []
+overlap_risk: []
+convergence_risk: []
+verdict: unreviewed
+

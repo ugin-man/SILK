@@ -1,0 +1,17 @@
+name: silk-v1-theory-contract
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  theoretical-component-contract:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check required SILK theory components
+        shell: pwsh
+        run: ./tests/silk_skill_contract.Tests.ps1
+

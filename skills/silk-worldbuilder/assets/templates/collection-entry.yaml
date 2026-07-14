@@ -1,0 +1,8 @@
+id: <ascii_snake_case_id>
+label: <human-readable-label>
+role: <how this collection helps navigation>
+weight: supporting
+reason: <why actual subjects need this view>
+aliases: []
+status: active
+

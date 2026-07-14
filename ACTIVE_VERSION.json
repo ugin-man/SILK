@@ -1,0 +1,10 @@
+{
+  "active": "v2.next/SILK-V2.html",
+  "compatibility": "v2.next/SILK-V2-NEXT.html",
+  "stage": "v2-release-candidate",
+  "world_policy": "no-project-specific-world-data-in-release-artifact",
+  "data_policy": "single-source-cell-registry-terrain-independent-from-sovereignty",
+  "build": "node v2.next/scripts/build_v2_next.js",
+  "audit": "v2.next/BUILD_AND_AUDIT.ps1",
+  "historical_policy": "older prototypes are reference material and are not release inputs"
+}

@@ -1,0 +1,92 @@
+{
+  "format": "silk-v2-world-package",
+  "version": "2.0.0",
+  "world_id": "starter_world",
+  "meta": {
+    "id": "starter_world",
+    "title": "新しい世界",
+    "subtitle": "WORLD PACKAGE NOT LOADED",
+    "description": "世界パッケージを読み込むと、設定と地理データがここに表示されます。"
+  },
+  "world": {
+    "id": "starter_world",
+    "title": "新しい世界",
+    "summary": "世界パッケージがまだ読み込まれていません。"
+  },
+  "collections": [
+    {
+      "id": "overview",
+      "label": "概要",
+      "description": "世界全体の案内",
+      "display": {
+        "order_hint": 0
+      }
+    }
+  ],
+  "subjects": [
+    {
+      "id": "world.starter",
+      "collection_id": "overview",
+      "name": "新しい世界",
+      "aliases": [],
+      "kind": "world",
+      "status": "pending",
+      "summary": "世界パッケージがまだ読み込まれていません。",
+      "body_markdown": "## はじめに\n\nIMPORTから世界パッケージを読み込むと、設定と地理データが表示されます。",
+      "display": {
+        "importance": 100,
+        "visibility_tier": 0
+      }
+    }
+  ],
+  "relations": [],
+  "claims": [],
+  "features": [],
+  "layers": [],
+  "snapshots": [
+    {
+      "id": "now",
+      "year": 0,
+      "label": "現在",
+      "short": "NOW"
+    }
+  ],
+  "spaceModel": {
+    "type": "planetary",
+    "status": "empty"
+  },
+  "rendererProfile": {
+    "primary": "globe",
+    "fallback": null
+  },
+  "spatial_registry": {
+    "format": "silk-spatial-registry-v1",
+    "world_id": "starter_world",
+    "features": [],
+    "layers": [],
+    "snapshots": [
+      {
+        "id": "now",
+        "year": 0,
+        "label": "現在",
+        "short": "NOW"
+      }
+    ]
+  },
+  "integration": {
+    "renderer": {
+      "space_type": "continental",
+      "primary": "globe",
+      "map_enabled": true,
+      "fallback": null
+    },
+    "label_contract": "optional",
+    "subject_count": 1,
+    "relation_count": 0,
+    "spatial_feature_count": 0
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

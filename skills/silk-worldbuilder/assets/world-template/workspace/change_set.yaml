@@ -1,0 +1,16 @@
+id: null
+subjects_create: []
+subjects_update: []
+subjects_move: []
+subjects_discard: []
+relations_add: []
+relations_update: []
+relations_cut: []
+claims_update: []
+collections_update: []
+queues_close: []
+queues_open: []
+reports_rewrite: []
+maturity_changes: []
+completion_update: null
+manifest_update: null

@@ -1,0 +1,12 @@
+id: work.<slug>
+level: 0
+phase: spin
+target: null
+reason: <why this is the highest-impact work>
+inputs: []
+dependencies: []
+canon_locks: []
+done_when: []
+new_obligations: []
+status: active
+

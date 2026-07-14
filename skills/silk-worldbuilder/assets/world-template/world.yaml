@@ -1,0 +1,21 @@
+world: <world-id>
+title: <world-title>
+intent: <what the user wants this world to achieve>
+intended_appeals: []
+taste_profile:
+  desired: []
+  disliked: []
+  reference_qualities: []
+desired_scale: grand_first_edition
+scope_envelope:
+  spatial: null
+  temporal: null
+  social: null
+  ontological: null
+  resolution_target: null
+status: building
+user_approval_scope: none
+user_canon: []
+constraints: []
+exclusions: []
+reversible_assumptions: []

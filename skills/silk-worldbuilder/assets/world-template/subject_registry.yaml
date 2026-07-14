@@ -1,0 +1,6 @@
+display_contract:
+  required: [importance, visibility_tier, label_priority, representative, preferred_contexts]
+  importance_range: [0, 100]
+  visibility_tier_range: [0, 4]
+  label_priority_range: [0, 100]
+subjects: []

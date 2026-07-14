@@ -1,0 +1,36 @@
+{
+  "product_modes": ["world", "connections"],
+  "product_mode_labels": ["WORLD", "ATLAS"],
+  "world_styles": ["SURFACE", "WHITE"],
+  "required_ids": [
+    "worldView",
+    "sphereWorldRail",
+    "sphereWorldMount",
+    "connectionsView",
+    "connectionsCanvas",
+    "atlasReaderArticlePane",
+    "atlasReaderSubjectPane",
+    "inspectorContent",
+    "worldStyleSwitch"
+  ],
+  "required_apis": [
+    "SILK_MAP",
+    "SILK_ATLAS",
+    "SILK_READER",
+    "SILK_PROJECT"
+  ],
+  "required_map_methods": [
+    "describeCapabilities",
+    "getState",
+    "getSpatialRegistry",
+    "validateTransaction",
+    "previewTransaction",
+    "applyTransaction",
+    "undo",
+    "redo",
+    "importSpatialRegistry",
+    "exportSpatialRegistry"
+  ],
+  "forbidden_product_labels": ["LOOM"],
+  "candidate_marker": "silk-world-sphere-v2"
+}

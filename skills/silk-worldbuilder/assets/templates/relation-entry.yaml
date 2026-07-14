@@ -1,0 +1,13 @@
+id: relation.<source-slug>.<target-slug>.<relation-slug>
+source: <stable-subject-id>
+target: <stable-subject-id>
+type: <open-semantic-relation>
+summary: <why this relation matters>
+effects_on_source: []
+effects_on_target: []
+origin: null
+scope: local
+development_status: working
+user_status: unreviewed
+temporal_bounds: null
+

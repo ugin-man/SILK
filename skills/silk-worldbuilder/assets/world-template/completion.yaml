@@ -1,0 +1,37 @@
+state: building
+user_approval_state: unreviewed
+world_level: 0
+clean_audit_streak: 0
+last_audit: null
+critical_gaps: []
+noncritical_limitations: []
+dimensions:
+  subject_integrity: pending
+  depth: pending
+  interest: pending
+  causality: pending
+  weave: pending
+  breadth: pending
+  independence: pending
+  anti_template: pending
+  scope: pending
+  naming: pending
+  coherence: pending
+  mystery: pending
+  plot_boundary: pending
+  usability: pending
+evidence:
+  subject_integrity: []
+  depth: []
+  interest: []
+  causality: []
+  weave: []
+  breadth: []
+  independence: []
+  anti_template: []
+  scope: []
+  naming: []
+  coherence: []
+  mystery: []
+  plot_boundary: []
+  usability: []

@@ -1,0 +1,14 @@
+world_level: 0
+current_phase: spin
+active_packet: null
+active_change_set: null
+last_integrated_iteration: 0
+next_action: derive viable seed hypotheses from the user intent
+promotion_blockers: []
+last_checkpoint: null
+spatial_state:
+  enabled: undecided
+  space_model: undefined
+  active_snapshot: null
+  active_spatial_packet: null
+  blockers: []

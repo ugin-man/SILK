@@ -1,0 +1,4 @@
+interface:
+  display_name: "SILK Worldbuilder"
+  short_description: "Weave, deepen, and audit a grand world autonomously"
+  default_prompt: "Use $silk-worldbuilder to weave this world from Level 0 through internal completion, including deepening, relation review, replacement, and anti-convergence audits."
