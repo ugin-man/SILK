@@ -21,6 +21,8 @@ const tests = [
   'grid_pack_contract.js',
   'payload_budget_contract.js',
   'self_test_contract.js',
+  'static_audit_portability_contract.js',
+  'cross_platform_build_contract.js',
   'browser_evidence_contract.js'
 ];
 

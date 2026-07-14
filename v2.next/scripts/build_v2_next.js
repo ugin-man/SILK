@@ -10,8 +10,9 @@ const hostPath = path.join(next, 'src', 'plain-host.html');
 const packagePath = path.join(next, 'data', 'plain-world.json');
 const outputPath = path.join(next, 'SILK-V2.html');
 const compatibilityOutputPath = path.join(next, 'SILK-V2-NEXT.html');
+const readText = (file) => fs.readFileSync(file, 'utf8').replace(/\r\n?/g, '\n');
 
-const host = fs.readFileSync(hostPath, 'utf8');
+const host = readText(hostPath);
 const worldPackage = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
 if (worldPackage.world_id !== 'starter_world') throw new Error('Plain package world_id must be starter_world');
 if (worldPackage.subjects?.length !== 1 || worldPackage.relations?.length !== 0) throw new Error('Plain package must contain one guide subject and no relations');
@@ -52,12 +53,12 @@ const grid = {
   dual_cells: built.dualEdges.flatMap((edge) => edge.cells), dual_faces: built.dualEdges.flatMap((edge) => edge.faces)
 };
 
-const css = fs.readFileSync(path.join(next, 'src', 'integration.css'), 'utf8');
-const guard = fs.readFileSync(path.join(next, 'src', 'package-guard.js'), 'utf8');
-const registry = fs.readFileSync(path.join(next, 'src', 'cell-registry.js'), 'utf8');
-const sphere = fs.readFileSync(path.join(next, 'src', 'world-sphere.js'), 'utf8');
-const adapter = fs.readFileSync(path.join(next, 'src', 'host-adapter.js'), 'utf8');
-const selfTest = fs.readFileSync(path.join(next, 'src', 'self-test.js'), 'utf8');
+const css = readText(path.join(next, 'src', 'integration.css'));
+const guard = readText(path.join(next, 'src', 'package-guard.js'));
+const registry = readText(path.join(next, 'src', 'cell-registry.js'));
+const sphere = readText(path.join(next, 'src', 'world-sphere.js'));
+const adapter = readText(path.join(next, 'src', 'host-adapter.js'));
+const selfTest = readText(path.join(next, 'src', 'self-test.js'));
 
 const worldRail = `<section class="sphere-world-rail" id="sphereWorldRail">
   <header class="sphere-rail-hero"><span>WORLD / CELL REGISTRY</span><strong>GEODESIC WORLD</strong><p>世界パッケージに含まれる地理データを球面セルで表示します。表示項目の切替とセル単位の編集ができます。</p></header>

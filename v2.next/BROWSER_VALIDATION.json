@@ -1,12 +1,11 @@
 {
   "status": "PASS",
-  "validated_at": "2026-07-14T16:39:48.797Z",
+  "validated_at": "2026-07-14T18:09:00.346Z",
   "candidate": "v2.next/SILK-V2.html",
-  "candidate_sha256": "F5C3FB5FCB1F9DC606715D204360F1F9FA393006F28E29469220650803FD53BC",
+  "candidate_sha256": "34FD2FA5CAABE295A414FF16C6C6F39615405C875D308DEF4D0917FC1FDFBF44",
   "browser": "Chromium via @playwright/cli",
   "sessions": [
-    "silk-v2-regression-final",
-    "silk-v2-completion-final"
+    "silk-v2-proof"
   ],
   "console_errors": 0,
   "console_warnings": 0,

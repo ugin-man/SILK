@@ -1,0 +1,4 @@
+v2.next/**/*.html text eol=lf
+v2.next/**/*.js text eol=lf
+v2.next/**/*.css text eol=lf
+v2.next/**/*.json text eol=lf

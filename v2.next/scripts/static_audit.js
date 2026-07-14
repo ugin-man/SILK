@@ -9,6 +9,8 @@ const candidatePath = path.join(next, 'SILK-V2.html');
 const compatibilityPath = path.join(next, 'SILK-V2-NEXT.html');
 const reportPath = path.join(next, 'STATIC_AUDIT.json');
 const browserEvidencePath = path.join(next, 'BROWSER_VALIDATION.json');
+const candidateReportPath = 'v2.next/SILK-V2.html';
+const browserEvidenceReportPath = 'v2.next/BROWSER_VALIDATION.json';
 const html = fs.readFileSync(candidatePath, 'utf8');
 const candidateSha256 = crypto.createHash('sha256').update(html).digest('hex').toUpperCase();
 const failures = [];
@@ -74,13 +76,13 @@ if (cellData && cellData.owners?.some(owner => owner !== -1)) failures.push('pla
 if (cellData && cellData.terrain?.some(terrain => terrain !== 'ocean')) failures.push('plain cells must start as ocean');
 if (!fs.existsSync(compatibilityPath) || fs.readFileSync(compatibilityPath, 'utf8') !== html) failures.push('compatibility candidate differs from release candidate');
 
-let browserValidation = { status: 'MISSING', evidence: browserEvidencePath };
+let browserValidation = { status: 'MISSING', evidence: browserEvidenceReportPath };
 if (fs.existsSync(browserEvidencePath)) {
   try {
     const evidence = JSON.parse(fs.readFileSync(browserEvidencePath, 'utf8'));
     browserValidation = evidence.candidate_sha256 === candidateSha256 ? evidence : { ...evidence, status: 'STALE', current_candidate_sha256: candidateSha256 };
   } catch (error) {
-    browserValidation = { status: 'INVALID', evidence: browserEvidencePath, error: error.message };
+    browserValidation = { status: 'INVALID', evidence: browserEvidenceReportPath, error: error.message };
   }
 }
 if (browserValidation.status !== 'PASS') failures.push(`browser validation is ${browserValidation.status}`);
@@ -88,7 +90,7 @@ if (browserValidation.status !== 'PASS') failures.push(`browser validation is ${
 const report = {
   ok: failures.length === 0,
   generated_at: new Date().toISOString(),
-  candidate: candidatePath,
+  candidate: candidateReportPath,
   sha256: candidateSha256,
   bytes: Buffer.byteLength(html),
   inline_scripts_parsed: scripts.length,

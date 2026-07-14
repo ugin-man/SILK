@@ -42,6 +42,25 @@
 - `docs/releases/v0.1.0.md`: GitHub Release本文の正本。
 - `v2.next/RELEASE_READINESS.md`: 現行ライセンスと証拠SHAに同期したV2状態。
 
+### Task 0: Cross-platform V2 rebuild baseline
+
+**Files:**
+- Create: `.gitattributes`
+- Create: `v2.next/tests/cross_platform_build_contract.js`
+- Modify: `v2.next/scripts/build_v2_next.js`
+- Modify: `v2.next/tests/run_all.js`
+
+**Interfaces:**
+- Consumes: tracked V2 build inputs with either LF or CRLF line endings.
+- Produces: byte-stable LF `SILK-V2.html` and `SILK-V2-NEXT.html` artifacts.
+
+- [ ] Write a contract that temporarily supplies CRLF build input, runs the real builder, verifies success and LF-only output, then restores all touched files.
+- [ ] Run it and confirm RED with `Inspector routing seam not found`.
+- [ ] Normalize all text build inputs to LF at read time and force LF output.
+- [ ] Add repository text rules to `.gitattributes` and register the contract in `run_all.js`.
+- [ ] Rebuild, run all V2 contracts, and treat the existing browser evidence mismatch as a separate validation task rather than rewriting its SHA.
+- [ ] Commit as `fix: make V2 release builds reproducible`.
+
 ### Task 1: Formal V1 YAML validator
 
 **Files:**
