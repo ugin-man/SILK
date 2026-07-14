@@ -1,0 +1,51 @@
+name: Validation proposal
+description: Propose a reproducible structural, creative, long-run, or browser evaluation.
+title: "[Validation]: "
+labels: [validation]
+body:
+  - type: dropdown
+    id: validation_type
+    attributes:
+      label: Validation type
+      options:
+        - structure
+        - creative_quality
+        - long_run_autonomy
+        - browser_behavior
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Evaluation question
+      description: State the claim this work can support and the claims it cannot support.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Reproduction method
+      description: Include prompt or package, environment, model label when available, commands, duration, and stopping rule.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Required evidence
+      description: List generated artifacts, logs, validator output, screenshots, or independent evaluator records.
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Success and failure criteria
+      description: Define the verdict before running the evaluation.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Evidence boundary
+      options:
+        - label: I will not present structural validity as creative-quality proof.
+          required: true

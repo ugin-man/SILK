@@ -1,94 +1,75 @@
 # SILK
 
-SILKは、一人のAIエージェントが世界観を自律的に紡ぎ直し、壮大で緻密な第一版世界コーパスを構築するためのCodexスキルです。
+[English](README.en.md)
 
-単に設定を増やしません。候補となる点を作り、主題を縦に深掘りし、世界との横接続を審査し、弱い設定や誤った接続を切断、縮小、統合、置換、棄却しながら、世界の成熟レベルを上げます。
+## SILKとは
 
-## 中核
+SILKは、単一のAIエージェントが世界設定を主題ごとに深め、意味のある関係だけを織り、弱い案や過剰な接続を切りながら内部完成まで進めるCodexスキルです。一つの主題に正本は一つ、関係は安定IDで管理し、人間が承認していない生成物は`pending`に残します。
 
-- 一つの主題に正本ファイルは一つ
-- 神、国家、都市などを前提にしない動的分類
-- 分類ではなく安定IDで主題と関係を管理
-- Level 0からLevel 4まで、同じ織機フェーズを反復
-- 複雑な魔法、国家、宗教、歴史などを縦パッケージで深掘り
-- 候補生成と正史採用を分離
-- 一つの連想が世界全体へ伝染するのを防止
-- 王道を否定せず、狙った魅力が出ているかを厳しく審査
-- 改善価値がない設定は関連設定ごと大胆に置換
-- 接続数ではなく、接続によって何が変わるかを審査
-- 接続しないこと、影響しない地域、独立した因果も世界の輪郭として保存
-- 章立てや主人公プロットはV3へ分離
+リポジトリ版は`v0.1.0`です。[MIT License](LICENSE)で公開しています。
 
-## スキル
+## V1
 
-[SILK Worldbuilder](skills/silk-worldbuilder/SKILL.md)が司令塔です。詳細規則は`skills/silk-worldbuilder/references/`へ分割されています。
+V1は生成ワークフローと世界パッケージ形式です。[SKILL.md](skills/silk-worldbuilder/SKILL.md)がLevel 0からLevel 4までのSpin、Deepen、Weave、Challenge、Integrateを統括します。
 
-- 理論対応監査: `SILK_V1_THEORY_AUDIT.md`
-- 実証時の人間評価: `USER_EVALUATION_GUIDE.md`
+`manifest.yaml`、正本主題、関係、主張、作業状態、ビュー、監査報告を一つのパッケージに保存します。正式なYAMLパーサーを使う検証器は、重複ID、壊れた参照、承認状態、完了阻害、二つの独立監査などを確認します。
+
+## V2
+
+V2は[V2公開候補](v2.next/SILK-V2.html)として配布する単一HTMLのローカルアプリです。WORLD、ATLAS、Reader、セル編集、パッケージ読込と書出しを同じID空間で扱います。ビルド、Node契約、静的監査、Chromium証拠は[リリース準備記録](v2.next/RELEASE_READINESS.md)にあります。
+
+## 5分で試す
+
+Node.js 20以上を使います。
+
+```powershell
+npm ci
+npm run validate:demo
+npm run test:v2
+npm run audit:v2
+```
+
+V1スキルをCodexへ入れる場合:
 
 ```powershell
 Copy-Item -Recurse -Force .\skills\silk-worldbuilder "$HOME\.codex\skills\silk-worldbuilder"
 ```
 
-使用例:
+## 公開デモ
 
-```text
-$silk-worldbuilder を使って、この着想から壮大な世界を構築して。
-Level 0から内部反復を続け、点の魅力、縦の深さ、横の接続、
-設定伝染、影響範囲、置換可能性を監査し、完成条件まで進めて。
-```
+[Glass Tide](examples/worlds/glass-tide)は、「熱を記憶する潮からガラスを採る」という入力から今回生成した小規模世界です。入力、Level 0からLevel 4の実行記録、6主題、5関係、3主張、作業台帳、AI自己監査、人間評価欄を公開しています。
 
-## 世界パッケージ
+このデモで、小規模なrevision 2パッケージを生成し、過程を記録し、正式パーサーで構造検証できることを確認しました。全主題は人間未承認のため`subjects/pending/`にあります。
 
-```text
-worlds/<world>/
-  manifest.yaml
-  world.yaml
-  state.yaml
-  taxonomy.yaml
-  subject_registry.yaml
-  relation_registry.yaml
-  claim_registry.yaml
-  completion.yaml
-  subjects/<status>/<dynamic_collection>/*.md
-  workspace/
-  views/
-  reports/
-```
+## 検証済み範囲
 
-`manifest.yaml`が人間とV2向けの入口です。人間が最初に読むのは`reports/world_overview.md`と`views/catalog.md`です。一つの対象を詳しく知る場合は`subject_registry.yaml`から正本ファイルへ進みます。関係は`relation_registry.yaml`と`views/relation_map.md`で追えます。
+- Glass Tideの必須ファイル、YAML構文、主題・関係・主張参照、完了状態
+- V1検証器の引用符、複数行値、インライン配列、重複キー、壊れた参照の回帰テスト
+- V2の再現ビルド、データ契約、描画契約、性能上限、ブラウザ証拠SHA
+- Chromiumでの390px表示、キーボード操作、XSS文字列、壊れた読込のロールバック
+- GitHub ActionsのV1、V2、リリース整合性チェック
 
-`subjects/approved/`はユーザー承認済みまたはユーザーが固定した正史だけです。SILKが内部的に完成と判断した生成物も、レビュー前は`subjects/pending/`に残ります。内部完成時は`reports/review_packet.md`から一括、分類別、主題別に評価できます。
+構造検証は創作品質を証明しません。
 
-## 現在地
+## 未実証範囲
 
-V1の理論、スキル手順、状態モデル、世界テンプレートは構築されています。実際の新規世界を長時間自律生成し、人間がD&Dやクトゥルフ級の第一版として評価する実証は未実施です。新スキーマへ更新した構造検査器も今回は実行していません。したがって、現時点では「理論実装済み、実行と創作品質は未実証」と扱います。`internally_complete`はユーザー承認済みを意味しません。
+- 長時間中断なしの大規模世界生成
+- 複数モデルと複数環境での再現性
+- 独立した複数人による創作品質評価
+- 書籍規模の世界や長期運用での保守性
 
-旧`novel_world/worlds/arnebia/`と`scripts/v1_*.ps1`は旧方式の試作であり、新V1の品質証明ではありません。
+Glass Tideは小規模な実行証拠であり、壮大さや面白さの一般的証明ではありません。長時間検証は`LONG_RUN_VALIDATION_ISSUE_URL`で追跡します。
 
-## 既知の制約
+## 貢献
 
-- 創作品質は使用するモデルと利用者の好みに依存する
-- すべてのホストが一つの応答で長時間自動継続できるとは限らない
-- 中断時は`state.yaml`、作業パケット、変更セットから再開し、停止を完成扱いしない
-- 構造検査器は面白さや壮大さを証明しない
-- D&Dやクトゥルフの長年の文化蓄積そのものを一回で再現するとは主張しない
-- V1が目指すのは、その規模へ育てられる緻密な第一版世界コーパスである
+[CONTRIBUTING.md](CONTRIBUTING.md)に、V1規則・検証器、V2、文書、人間評価の参加経路と必要な確認コマンドを書いています。バグ報告と検証提案には再現条件と証拠を添えてください。
 
 ## ロードマップ
 
-- V1: 自律世界構築、正本管理、成熟度反復、完成監査
-- V2: ローカルWebで状態、分類、正本、関係、縦横の糸を可視化
-- V3: 完成世界から多数の物語を生成し、長期的な文化蓄積へ育てる
+- V1: 長時間実行と独立評価を増やし、検証器の意味契約を広げる
+- V2: 世界パッケージの可視化と編集の回帰証拠を維持する
+- V3: 完成世界から物語を作る別工程として扱い、V1へプロットを混ぜない
 
-## V2 ローカルアプリ
+## ライセンス
 
-V2の公開候補は`v2.next/SILK-V2.html`です。初期状態には作品固有の世界設定を含まず、世界パッケージを読み込んで使います。球体WORLD、セル編集、ATLAS Graph、Wikipedia型Readerを一つのデータとID空間で扱います。
-
-読み込み時はV1側の`validation.ok`をそのまま信用せず、V2側でもID、参照、地理形状、件数、容量、危険キーを検査します。ATLASとWORLDのどちらかが失敗した場合は読み込み前へ戻り、半端な世界を表示しません。セル編集後は未保存状態になり、`EXPORT`でセルを含むV2世界パッケージを書き出せます。デスクトップだけでなく、390px幅のWORLDとReader、キーボードによる球体操作も外部Chromiumで確認しています。
-
-```powershell
-.\v2.next\BUILD_AND_AUDIT.ps1
-```
-
-公開ビルドの入力は`v2.next/src/plain-host.html`、`v2.next/data/plain-world.json`、`v2.next/src/`の統合モジュールです。作品別のJSONや過去版HTMLは公開ビルドへ混ぜません。詳しい完成範囲と検証結果は`SILK_V2_COMPLETION.md`と`v2.next/RELEASE_READINESS.md`にあります。
+SILKは[MIT License](LICENSE)です。
